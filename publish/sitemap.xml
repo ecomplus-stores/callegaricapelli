@@ -182,6 +182,78 @@
     </url>
   
     <url>
+      <loc>https://callegaricapelli.netlify.app/combo-slim-duplo-eleganza-stile-cpfp705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/combo-manicure-eleganza-stile-cmc705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/combo-manicure-innovare-stile-cmc405s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/cirandinha-slim-innovare-stile-mc405s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/cadeira-de-espera-innovare-stile-rc405s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/cadeira-de-espera-eleganza-stile-rc705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/cirandinha-slim-eleganza-stile-mc705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/cadeira-hidraulica-reclinavel-eleganza-stile-prj705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/cadeira-hidraulica-fixa-eleganza-stile-pfj705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/combo-slim-triplo-eleganza-stile-cpffj705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/combo-triplo-eleganza-stile-cpffxq705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/combo-slim-triplo-eleganza-stile-cpffp705s</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
       <loc>https://callegaricapelli.netlify.app/linea-tradizionale/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
@@ -530,13 +602,13 @@
     </url>
   
     <url>
-      <loc>https://callegaricapelli.netlify.app/pages/sobre-nos</loc>
+      <loc>https://callegaricapelli.netlify.app/pages/termos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
   
     <url>
-      <loc>https://callegaricapelli.netlify.app/pages/termos</loc>
+      <loc>https://callegaricapelli.netlify.app/pages/sobre-nos</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
@@ -560,15 +632,15 @@
     </url>
   
     <url>
-      <loc>https://callegaricapelli.netlify.app/</loc>
-      <changefreq>daily</changefreq>
-      <priority>1</priority>
-    </url>
-  
-    <url>
       <loc>https://callegaricapelli.netlify.app/blog</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>https://callegaricapelli.netlify.app/</loc>
+      <changefreq>daily</changefreq>
+      <priority>1</priority>
     </url>
   
     <url>
