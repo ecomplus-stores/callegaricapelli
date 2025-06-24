@@ -1,7 +1,7 @@
 {
   "domain": "callegaricapelli.netlify.app",
   "currency_symbol": "R$",
-  "primary_color": "#000000",
+  "primary_color": "#878794",
   "theme": {
     "bootswatch": "cyborg",
     "custom": "_"
