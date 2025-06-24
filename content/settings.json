@@ -1,7 +1,7 @@
 {
   "domain": "callegaricapelli.netlify.app",
   "currency_symbol": "R$",
-  "primary_color": "#aab0b7",
+  "primary_color": "#000000",
   "theme": {
     "bootswatch": "cyborg",
     "custom": "_"
@@ -18,7 +18,7 @@
   "favicon": "/img/uploads/logo.png",
   "icons_font": "_",
   "country_code": "BR",
-  "secondary_color": "#c0c6cd",
+  "secondary_color": "#ffffff",
   "icon": "/img/uploads/logo.png",
   "store_id": 51604,
   "description": "Comércio de móveis e acessórios para salões de beleza, esmalterias, estéticas e estúdios de tatuagens.\n",
