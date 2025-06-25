@@ -21,11 +21,11 @@
     "background": "#a29898",
     "color": "#000000"
   },
-  "alphabetical_order_submenu": true,
+  "alphabetical_order_submenu": false,
   "name_all_departments": "",
   "search_input": true,
-  "desktop_megamenu": false,
-  "full_width_submenu": true,
+  "desktop_megamenu": true,
+  "full_width_submenu": false,
   "contacts_stripe": {
     "pages": [
       {
