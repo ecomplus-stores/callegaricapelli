@@ -10,7 +10,7 @@
       "/outlet/?OUTLET",
       "/cadeiras-poltronas-de-corte/?CADEIRAS"
     ],
-    "random": 8,
+    "random": 0,
     "full_width": false
   },
   "menu_all_departments": false,
@@ -31,6 +31,10 @@
       {
         "title": "Sobre nós",
         "link": "/pages/sobre-nos"
+      },
+      {
+        "title": "Contato",
+        "link": "/pages/contato"
       }
     ],
     "phone_wpp": true,
