@@ -11,20 +11,20 @@
       "/cadeiras-poltronas-de-corte/?CADEIRAS"
     ],
     "random": 0,
-    "full_width": false
+    "full_width": true
   },
   "menu_all_departments": false,
   "centralized_logo": false,
   "marketing_stripe": {
     "text": "Aproveite nossos descontos de até 50%!",
     "link": "/promotion",
-    "background": "#000000",
-    "color": "#ffffff"
+    "background": "#ffffff",
+    "color": "#000000"
   },
   "alphabetical_order_submenu": false,
   "name_all_departments": "",
   "search_input": true,
-  "desktop_megamenu": false,
+  "desktop_megamenu": true,
   "full_width_submenu": false,
   "contacts_stripe": {
     "pages": [
