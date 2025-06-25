@@ -1,6 +1,15 @@
 {
-  "sort_categories": [],
-  "alphabetical_order": false,
+  "sort_categories": [
+    "linha-exclusiva/",
+    "carrinhos-e-armarios/",
+    "estetica/",
+    "lavatorios/",
+    "manicure-podologia/",
+    "cadeiras-poltronas-de-corte/",
+    "outlet/",
+    "barbearia/"
+  ],
+  "alphabetical_order": true,
   "phone_wpp": true,
   "socials": true
 }
