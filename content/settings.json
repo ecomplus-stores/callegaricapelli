@@ -1,12 +1,12 @@
 {
   "domain": "callegaricapelli.netlify.app",
   "currency_symbol": "R$",
-  "primary_color": "#aaa7a7",
+  "primary_color": "#d4c0c0",
   "theme": {
     "bootswatch": "cyborg",
     "custom": "_"
   },
-  "bg_color": "#f4f3f3",
+  "bg_color": "#343232",
   "repository": "ecomplus-stores/callegaricapelli",
   "logo": "/img/uploads/logo.png",
   "name": "CALLEGARI CAPELLI",
@@ -18,7 +18,7 @@
   "favicon": "/img/uploads/logo.png",
   "icons_font": "_",
   "country_code": "BR",
-  "secondary_color": "#ffffff",
+  "secondary_color": "#e9e6e6",
   "icon": "/img/uploads/logo.png",
   "store_id": 51604,
   "description": "Comércio de móveis e acessórios para salões de beleza, esmalterias, estéticas e estúdios de tatuagens.\n",
