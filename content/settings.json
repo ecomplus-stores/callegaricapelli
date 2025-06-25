@@ -1,12 +1,12 @@
 {
   "domain": "callegaricapelli.netlify.app",
   "currency_symbol": "R$",
-  "primary_color": "#878794",
+  "primary_color": "#aaa7a7",
   "theme": {
     "bootswatch": "cyborg",
     "custom": "_"
   },
-  "bg_color": "#ffffff",
+  "bg_color": "#f4f3f3",
   "repository": "ecomplus-stores/callegaricapelli",
   "logo": "/img/uploads/logo.png",
   "name": "CALLEGARI CAPELLI",
