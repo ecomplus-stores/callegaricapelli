@@ -1,14 +1,11 @@
 {
   "categories_list": {
     "featured": [
-      "/linha-exclusiva/?LINHA EXCLUSIVA",
-      "/carrinhos-e-armarios/?CARRINHOS ",
-      "/estetica/?ESTÉTICA",
-      "/lavatorios/?LAVATÓRIOS",
-      "/manicure-podologia/?MANICURE",
-      "/barbearia/?BARBEARIA",
-      "/outlet/?OUTLET",
-      "/cadeiras-poltronas-de-corte/?CADEIRAS"
+      "/linha-exclusiva/?Promoções e Combos *",
+      "/cadeiras-poltronas-de-corte/?CADEIRAS *",
+      "/lavatorios/?LAVATÓRIOS *",
+      "/estetica/?ESTÉTICA *",
+      "/categoria-?Categoria *"
     ],
     "random": 0,
     "full_width": true
