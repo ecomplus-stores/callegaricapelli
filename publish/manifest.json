@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.88537c4760844da20f42135c380febbc.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.8f3c0c14d87509f782b8d34b076d6b76.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.ea0467c49cb467a212ffe1d9ea32dc5a.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.187c9911ee10fafc1e2f6a83154c51a1.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.1fd66d164d37012784aeee79004753d8.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "CALLEGARI CAPELLI",
+  "short_name": "CALLEGARI CAPELLI",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Comércio de móveis e acessórios para salões de beleza, esmalterias, estéticas e estúdios de tatuagens.\n",
+  "background_color": "#343232",
+  "theme_color": "#ffffff"
+}
