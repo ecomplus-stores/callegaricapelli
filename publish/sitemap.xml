@@ -206,7 +206,7 @@
     </url>
   
     <url>
-      <loc>https://callegaricapelli.netlify.app/carrarinhos-para-esmaltes-esmalteiros/</loc>
+      <loc>https://callegaricapelli.netlify.app/carrinhos-para-esmaltes/</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -5234,13 +5234,13 @@
     </url>
   
     <url>
-      <loc>https://callegaricapelli.netlify.app/admin/index</loc>
+      <loc>https://callegaricapelli.netlify.app/app/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
   
     <url>
-      <loc>https://callegaricapelli.netlify.app/app/index</loc>
+      <loc>https://callegaricapelli.netlify.app/admin/index</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
     </url>
