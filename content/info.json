@@ -1,11 +1,13 @@
 {
   "shipping": {
     "show": true,
-    "text": "Entregamos para todo o Brasil"
+    "text": "Entregamos para todo o Brasil",
+    "title": "\" Monte seu Salão completo com a gente - Qualidade conforto estilo em cada detalhe! \""
   },
   "installments": {
     "show": true,
-    "text": "Parcele em até 12x sem juros"
+    "text": "",
+    "title": "Parcelamos em 12x sem juros no Boçeto. Obs. Sujeito a analise de credito."
   },
   "exchange": {
     "show": false,
@@ -13,6 +15,6 @@
   },
   "promo": {
     "show": true,
-    "text": "Diferentes promoções ao longo do ano!"
+    "text": ""
   }
 }
