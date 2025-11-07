@@ -4,7 +4,7 @@
   "primary_color": "#ffffff",
   "theme": {
     "bootswatch": "cyborg",
-    "custom": "clean-dark"
+    "custom": "clean-white"
   },
   "bg_color": "#343232",
   "repository": "ecomplus-stores/callegaricapelli",
