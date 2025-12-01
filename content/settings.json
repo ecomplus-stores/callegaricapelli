@@ -4,7 +4,7 @@
   "primary_color": "#aaa3a3",
   "theme": {
     "bootswatch": "cerulean",
-    "custom": "_"
+    "custom": "ecom-beauty"
   },
   "bg_color": "#f0e9e9",
   "repository": "ecomplus-stores/callegaricapelli",
