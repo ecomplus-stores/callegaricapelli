@@ -1,10 +1,10 @@
 {
   "domain": "callegaricapelli.netlify.app",
   "currency_symbol": "R$",
-  "primary_color": "#aaa3a3",
+  "primary_color": "#908b8b",
   "theme": {
     "bootswatch": "cerulean",
-    "custom": "ecom-beauty"
+    "custom": "_"
   },
   "bg_color": "#f0e9e9",
   "repository": "ecomplus-stores/callegaricapelli",
