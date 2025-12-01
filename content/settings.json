@@ -4,7 +4,7 @@
   "primary_color": "#908b8b",
   "theme": {
     "bootswatch": "cerulean",
-    "custom": "_"
+    "custom": "niche-baby"
   },
   "bg_color": "#f6efef",
   "repository": "ecomplus-stores/callegaricapelli",
@@ -18,7 +18,7 @@
   "favicon": "/img/uploads/whatsapp-image-2025-11-19-at-12.00.06.jpeg",
   "icons_font": "line-awesome",
   "country_code": "BR",
-  "secondary_color": "#575555",
+  "secondary_color": "",
   "icon": "/img/uploads/whatsapp-image-2025-11-19-at-12.00.06.jpeg",
   "store_id": 51604,
   "description": "Comércio de móveis e acessórios para salões de beleza, esmalterias, estéticas e estúdios de tatuagens.\n",
