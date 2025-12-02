@@ -4,7 +4,7 @@
   "primary_color": "#908b8b",
   "theme": {
     "bootswatch": "cerulean",
-    "custom": "ecom-beauty"
+    "custom": "clean-white"
   },
   "bg_color": "#f6efef",
   "repository": "ecomplus-stores/callegaricapelli",
@@ -16,7 +16,7 @@
   "mini_logo": "",
   "font_family": "Roboto",
   "favicon": "/img/uploads/whatsapp-image-2025-11-19-at-12.00.06.jpeg",
-  "icons_font": "line-awesome",
+  "icons_font": "bootstrap-icons",
   "country_code": "BR",
   "secondary_color": "",
   "icon": "/img/uploads/whatsapp-image-2025-11-19-at-12.00.06.jpeg",
