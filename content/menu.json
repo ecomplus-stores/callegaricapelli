@@ -2,14 +2,14 @@
   "sort_categories": [
     "linha-exclusiva/",
     "linhas-exclusivas",
-    "estetica/",
+    "cadeiras-poltronas-de-corte/",
     "lavatorios/",
     "manicure-podologia/",
-    "cadeiras-poltronas-de-corte/",
-    "outlet/",
-    "barbearia/"
+    "barbearia/",
+    "estetica/",
+    "outlet/"
   ],
-  "alphabetical_order": true,
+  "alphabetical_order": false,
   "phone_wpp": true,
   "socials": true
 }
