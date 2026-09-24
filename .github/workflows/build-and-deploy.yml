@@ -1,6 +1,7 @@
 name: Build and deploy
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -56,6 +57,7 @@ jobs:
         run: cd .functions && npm ci --only=production && cd ../..
 
       - name: Check last changed files
+        if: github.event_name == 'push'
         uses: lots0logs/gh-action-get-changed-files@2.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -63,7 +65,7 @@ jobs:
 
       - name: Run partial build
         env:
-          CHANGED_FILES: ${{ steps.changed_files.outputs.all }}
+          CHANGED_FILES: ${{ steps.changed_files.outputs.all || '[]' }}
         run: |
           IS_ECOMPLUS_CD=$(node -p "const f = JSON.parse('${CHANGED_FILES}'); f.length === 1 && f[0] === '.ecomplus.cd.json'");
           if [ $IS_ECOMPLUS_CD != false ]; then

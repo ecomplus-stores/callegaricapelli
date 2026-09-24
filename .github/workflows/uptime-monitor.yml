@@ -1,0 +1,89 @@
+name: Uptime monitor (trial)
+
+# Trial run: checks the storefront every 15 min and, if static assets or
+# SSR pages are broken, redeploys via "Build and deploy".
+# Disables itself after EXPIRES_AT.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    inputs:
+      simulate_failure:
+        description: 'Simulate a failed check to test the redeploy path'
+        type: boolean
+        default: false
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: uptime-monitor
+  cancel-in-progress: false
+
+env:
+  EXPIRES_AT: '2026-09-25T18:30:00Z'
+  STORE_DOMAIN: callegaricapelli.com.br
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Disable after trial period
+        id: expiry
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(date -u +%s)" -ge "$(date -u -d "$EXPIRES_AT" +%s)" ]; then
+            echo "Trial period ended ($EXPIRES_AT), disabling this workflow."
+            gh workflow disable uptime-monitor.yml -R "$GITHUB_REPOSITORY"
+            echo "expired=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check storefront
+        id: check
+        if: steps.expiry.outputs.expired != '1'
+        env:
+          SIMULATE: ${{ inputs.simulate_failure }}
+        run: |
+          check () {
+            JS=$(curl -s -m 30 -o /dev/null -w '%{http_code}' "https://$STORE_DOMAIN/storefront.js?uptime=$(date +%s)")
+            PRODUCT=$(curl -s -m 30 "https://$STORE_DOMAIN/sitemap.xml" | grep -oE '<loc>[^<]+</loc>' | sed -n 2p | sed -E 's#</?loc>##g')
+            if [ -n "$PRODUCT" ]; then
+              PAGE=$(curl -s -m 60 -o /dev/null -w '%{http_code}' "$PRODUCT?uptime=$(date +%s)")
+            else
+              PAGE=no-sitemap
+            fi
+            echo "storefront.js=$JS page=$PAGE ($PRODUCT)"
+            [ "$JS" = 200 ] && [ "$PAGE" = 200 ]
+          }
+          if [ "$SIMULATE" = true ]; then
+            echo "Simulated failure"
+            echo "healthy=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          for i in 1 2 3; do
+            if check; then
+              echo "healthy=1" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            sleep 30
+          done
+          echo "healthy=0" >> "$GITHUB_OUTPUT"
+
+      - name: Redeploy
+        if: steps.check.outputs.healthy == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RECENT=$(gh run list -R "$GITHUB_REPOSITORY" -w build-and-deploy.yml -L 5 --json status,createdAt \
+            --jq "[.[] | select(.status != \"completed\" or (.createdAt | fromdateiso8601) > (now - 1200))] | length")
+          if [ "$RECENT" != 0 ]; then
+            echo "::warning::Storefront unhealthy, but a deploy is running or ran in the last 20 min; skipping."
+          else
+            gh workflow run build-and-deploy.yml -R "$GITHUB_REPOSITORY" --ref master
+            echo "::warning::Storefront unhealthy, redeploy dispatched."
+          fi
+          exit 1
