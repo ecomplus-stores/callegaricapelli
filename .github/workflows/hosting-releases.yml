@@ -1,0 +1,33 @@
+name: Hosting releases (diagnostic)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: List Firebase Hosting releases and versions
+        env:
+          GCP_ACCOUNT_KEY: ${{ secrets.GCP_ACCOUNT_KEY }}
+        run: |
+          echo "$GCP_ACCOUNT_KEY" > key.json
+          PROJECT_ID=$(node -p "require('./key.json').project_id")
+          SA_EMAIL=$(node -p "require('./key.json').client_email")
+          echo "project: $PROJECT_ID | deploy SA: $SA_EMAIL"
+          gcloud auth activate-service-account --key-file=key.json -q
+          TOKEN=$(gcloud auth print-access-token)
+          rm -f key.json
+          API="https://firebasehosting.googleapis.com/v1beta1/sites/$PROJECT_ID"
+          echo "::group::RELEASES (newest first)"
+          curl -s -H "Authorization: Bearer $TOKEN" "$API/releases?pageSize=40" \
+            | jq -r '.error // (.releases[] | "\(.releaseTime) | \(.type // "DEPLOY") | user=\(.releaseUser.email // "-") | version=\(.version.name | split("/") | last) | files=\(.version.fileCount // 0) | status=\(.version.status) | created=\(.version.createTime) by \(.version.createUser.email // "-") | rewrites=\(.version.config.rewrites | length)")'
+          echo "::endgroup::"
+          echo "::group::VERSIONS (incl. deleted)"
+          curl -s -H "Authorization: Bearer $TOKEN" "$API/versions?pageSize=40" \
+            | jq -r '.error // (.versions[] | "\(.createTime) | \(.name | split("/") | last) | status=\(.status) | files=\(.fileCount // 0) | by \(.createUser.email // "-") | deleted=\(.deleteTime // "-") by \(.deleteUser.email // "-")")'
+          echo "::endgroup::"
+          echo "::group::CHANNELS"
+          curl -s -H "Authorization: Bearer $TOKEN" "$API/channels" | jq -r '.error // (.channels[] | "\(.name | split("/") | last) | updated=\(.updateTime) | expires=\(.expireTime // "-")")'
+          echo "::endgroup::"
