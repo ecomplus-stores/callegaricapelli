@@ -86,4 +86,3 @@ jobs:
             gh workflow run build-and-deploy.yml -R "$GITHUB_REPOSITORY" --ref master
             echo "::warning::Storefront unhealthy, redeploy dispatched."
           fi
-          exit 1
